@@ -1,30 +1,25 @@
 ---
 layout: default
 title: 디자인/그래픽
-category: 디자인/그래픽
 ---
 
-## 🎨 디자인/그래픽 정보
+<h2>🎨 디자인/그래픽 기사 목록</h2>
 
-### 1. 디자인/그래픽 정보 1
-디자인/그래픽 정보 1 테스트
+<ul>
+  {% assign has_post = false %}
+  {% for post in site.posts %}
+    {% if post.category == "디자인/그래픽" or post.categories contains "디자인/그래픽" %}
+      {% assign has_post = true %}
+      <li style="margin-bottom: 10px;">
+        <a href="{{ post.url | relative_url }}" style="font-size: 18px; font-weight: bold;">
+          {{ post.title }}
+        </a>
+        <span style="color: #888; font-size: 14px;">- {{ post.date | date: "%Y-%m-%d" }}</span>
+      </li>
+    {% endif %}
+  {% endfor %}
 
----
-
-### 2. 디자인/그래픽 정보 2
-디자인/그래픽 정보 2 테스트
-
----
-
-### 3. 디자인/그래픽 정보 3
-디자인/그래픽 정보 3 테스트
-
----
-
-### 4. 디자인/그래픽 정보 4
-디자인/그래픽 정보 4 테스트
-
----
-
-### 5. 디자인/그래픽 정보 5
-디자인/그래픽 정보 5 테스트
+  {% if has_post == false %}
+    <li>등록된 디자인/그래픽 기사가 없습니다.</li>
+  {% endif %}
+</ul>
