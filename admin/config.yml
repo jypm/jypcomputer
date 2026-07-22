@@ -8,9 +8,9 @@ public_folder: "/assets/images"
 collections:
   - name: "posts"
     label: "기사 작성"
-    folder: "."
+    folder: "posts"
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "레이아웃", name: "layout", widget: "hidden", default: "default"}
       - {label: "기사 제목", name: "title", widget: "string"}
