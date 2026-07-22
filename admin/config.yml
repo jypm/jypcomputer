@@ -10,7 +10,7 @@ collections:
     label: "기사 작성"
     folder: "posts"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{year}}{{month}}{{day}}-{{hour}}{{minute}}{{second}}"
     fields:
       - {label: "레이아웃", name: "layout", widget: "hidden", default: "default"}
       - {label: "기사 제목", name: "title", widget: "string"}
