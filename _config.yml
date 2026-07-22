@@ -1,0 +1,8 @@
+title: "뉴스 블로그"
+description: "IT, 게임, PC 하드웨어 정보"
+baseurl: "/jypcomputer"
+url: "https://jypm.github.io"
+
+# 지킬(Jekyll) 기본 설정
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
