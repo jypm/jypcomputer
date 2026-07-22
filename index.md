@@ -1,20 +1,19 @@
 ---
 layout: default
-title: My News Blog - 메인
+title: 뉴스 블로그
 ---
 
-## 📰 카테고리별 주요 기사 목록
+<h2>최신 기사 목록</h2>
 
-### 🎮 게임
-* [디아블로2 룬워드 세팅 가이드 (헬, 코, 주울, 에드, 팔)](/jypcomputer/diablo2-runes)
-* [게임 정보 1 ~ 5 테스트 목록 보기](/jypcomputer/game)
-
----
-
-### 💻 PC/하드웨어
-* [PC/하드웨어 정보 1 ~ 5 테스트 목록 보기](/jypcomputer/hardware)
-
----
-
-### 🎨 디자인/그래픽
-* [디자인/그래픽 정보 1 ~ 5 테스트 목록 보기](/jypcomputer/design)
+<ul>
+  {% for post in site.posts %}
+    <li style="margin-bottom: 10px;">
+      <a href="{{ post.url | relative_url }}" style="font-size: 18px; font-weight: bold;">
+        {{ post.title }}
+      </a>
+      <span style="color: #888; font-size: 14px;">- {{ post.date | date: "%Y-%m-%d" }}</span>
+    </li>
+  {% empty %}
+    <li>등록된 기사가 없습니다.</li>
+  {% endfor %}
+</ul>
