@@ -13,7 +13,7 @@ title: 뉴스 블로그
       </a>
       <span style="color: #888; font-size: 14px;">- {{ post.date | date: "%Y-%m-%d" }}</span>
     </li>
-  {% empty %}
+  {% else %}
     <li>등록된 기사가 없습니다.</li>
   {% endfor %}
 </ul>
